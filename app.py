@@ -292,12 +292,12 @@ def not_found(error):
 
 
 @app.errorhandler(500)
-def not_found(error):
+def auth_error(auth_error):
     return jsonify({
-                    "success": False,
-                    "error": 500,
-                    "message": "internal server error"
-                    }), 500
+        "success": False,
+        "error": auth_error.status_code,
+        "message": auth_error.error['description']
+        }), auth_error.status_code
 
 
 @app.errorhandler(401)
