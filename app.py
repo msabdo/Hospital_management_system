@@ -2,6 +2,7 @@
 from flask import Flask, jsonify, request, json
 from models import setup_app, db_drop_and_create_all, Patient, Doctor
 from sqlalchemy.exc import IntegrityError
+from auth import requires_auth
 
 app = Flask(__name__)
 setup_app(app)
@@ -11,7 +12,13 @@ setup_app(app)
 # db_drop_and_create_all()
 
 # ------------------------ patients routes ---------------#
+@app.route('/')
+def login():
+    return request.args.get('access_token')
+
+
 @app.route('/patients')
+@requires_auth(permission='get:all_patients')
 def get_all_patients():
     patients_list = []
     try:
@@ -20,8 +27,9 @@ def get_all_patients():
             return jsonify({
                 "success": True,
                 "description": "patients not found"
-            }), 200
-    except Exception:
+            }), 404
+    except Exception as err:
+        print("get all patients: ", err)
         return jsonify({"success": False}), 500
 
     for patient in patients:
@@ -35,6 +43,7 @@ def get_all_patients():
 
 
 @app.route('/patients/<int:patient_id>')
+@requires_auth(permission='get:patient')
 def get_patient(patient_id):
 
     try:
@@ -45,7 +54,8 @@ def get_patient(patient_id):
                 "description": "patient not found"
             }), 404
 
-    except Exception:
+    except Exception as err:
+        print("get patient: ", err)
         return jsonify({"success": False}), 500
 
     return jsonify({
@@ -55,11 +65,12 @@ def get_patient(patient_id):
 
 
 @app.route('/patients', methods=['POST'])
+@requires_auth(permission='post:patient')
 def create_patient():
     patient_data = json.loads(request.data)
 
     doctor = Doctor.query.get(patient_data['doctor_id'])
-    if doctor == None:
+    if not doctor:
         return jsonify({
             "success": False,
             "description": "doctor id not found"
@@ -81,9 +92,9 @@ def create_patient():
             "success": False,
             "description": "there is patient with the same email"
         }), 200
-    except Exception as err:
-        print(err)
-        return jsonify({"success": False}), 500
+    # except Exception as err:
+    #     print(err)
+    #     return jsonify({"success": False}), 500
 
     return jsonify({
         "success": True,
@@ -92,6 +103,7 @@ def create_patient():
 
 
 @app.route('/patients/<int:patient_id>', methods=['PUT'])
+@requires_auth(permission='put:patient')
 def update_patient(patient_id):
     patient_data = json.loads(request.data)
     doctor = Doctor.query.get(patient_data['doctor_id'])
@@ -128,6 +140,7 @@ def update_patient(patient_id):
 
 
 @app.route('/patients/<int:patient_id>', methods=['DELETE'])
+@requires_auth(permission='delete:patient')
 def delete_patient(patient_id):
     try:
         patient = Patient.query.get(patient_id)
@@ -150,6 +163,7 @@ def delete_patient(patient_id):
 # ------------------------------------------------------------------------------#
 # ------------------------------------ doctors routes ---------------------------#
 @app.route('/doctors')
+@requires_auth(permission='get:all_doctors')
 def get_all_doctors():
     doctors_list = []
     try:
@@ -172,6 +186,7 @@ def get_all_doctors():
 
 
 @app.route('/doctors/<int:doctor_id>')
+@requires_auth(permission='get:doctor')
 def get_doctor(doctor_id):
     try:
         doctor = Doctor.query.get(doctor_id)
@@ -179,7 +194,7 @@ def get_doctor(doctor_id):
             return jsonify({
                 "success": True,
                 "description": "doctor not found"
-            }), 200
+            }), 404
 
     except Exception:
         return jsonify({"success": False}), 500
@@ -191,6 +206,7 @@ def get_doctor(doctor_id):
 
 
 @app.route('/doctors', methods=['POST'])
+@requires_auth(permission='post:doctor')
 def create_doctor():
     doctor_data = json.loads(request.data)
     doctor = Doctor(
@@ -216,6 +232,7 @@ def create_doctor():
 
 
 @app.route('/doctors/<int:doctor_id>', methods=['PUT'])
+@requires_auth(permission='put:doctor')
 def update_doctors(doctor_id):
     doctor_data = json.loads(request.data)
     try:
@@ -237,6 +254,7 @@ def update_doctors(doctor_id):
 
 
 @app.route('/doctors/<int:doctor_id>', methods=['DELETE'])
+@requires_auth(permission='delete:doctor')
 def delete_doctor(doctor_id):
     try:
         doctor = Doctor.query.get(doctor_id)
@@ -264,5 +282,33 @@ def delete_doctor(doctor_id):
     }), 200
 
 
+@app.errorhandler(404)
+def not_found(error):
+    return jsonify({
+                    "success": False,
+                    "error": 404,
+                    "message": "resource not found"
+                    }), 404
+
+
+@app.errorhandler(500)
+def not_found(error):
+    return jsonify({
+                    "success": False,
+                    "error": 500,
+                    "message": "internal server error"
+                    }), 500
+
+
+@app.errorhandler(401)
+def not_found(error):
+    return jsonify({
+                    "success": False,
+                    "error": 401,
+                    "message": "not authenticated"
+                    }), 401
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
