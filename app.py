@@ -287,7 +287,7 @@ def delete_doctor(doctor_id):
 def not_found(error):
     return jsonify({
                     "success": False,
-                    "error": jsonify(error),
+                    "error": str(error),
                     "message": "resource not found from the app"
                     }), 404
 
@@ -296,7 +296,7 @@ def not_found(error):
 def auth_error(error):
     return jsonify({
         "success": False,
-        "error": jsonify(error),
+        "error": str(error),
         "message": 'internal server error from the app'
         }), 500
 
@@ -305,7 +305,7 @@ def auth_error(error):
 def not_found(error):
     return jsonify({
                     "success": False,
-                    "error": jsonify(error),
+                    "error": str(error),
                     "message": "not authenticated from the app"
                     }), 401
 
