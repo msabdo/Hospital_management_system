@@ -295,9 +295,9 @@ def not_found(error):
 def auth_error(auth_error):
     return jsonify({
         "success": False,
-        "error": auth_error.status_code,
+        "error": 500,
         "message": auth_error.error['description']
-        }), auth_error.status_code
+        }), 500
 
 
 @app.errorhandler(401)
