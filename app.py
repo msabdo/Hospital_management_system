@@ -292,7 +292,7 @@ def not_found(error):
 
 
 @app.errorhandler(500)
-def auth_error(auth_error):
+def auth_error(error):
     return jsonify({
         "success": False,
         "error": error,
