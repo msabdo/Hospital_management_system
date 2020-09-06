@@ -14,7 +14,8 @@ setup_app(app)
 # ------------------------ patients routes ---------------#
 @app.route('/')
 def login():
-    return request.args.get('access_token')
+    return '<h2>Hi there,</h2>' \
+           '<h3>This is Simple Hospital Management System</h3>'
 
 
 @app.route('/patients')
@@ -286,7 +287,7 @@ def delete_doctor(doctor_id):
 def not_found(error):
     return jsonify({
                     "success": False,
-                    "error": error,
+                    "error": jsonify(error),
                     "message": "resource not found from the app"
                     }), 404
 
@@ -295,7 +296,7 @@ def not_found(error):
 def auth_error(error):
     return jsonify({
         "success": False,
-        "error": error,
+        "error": jsonify(error),
         "message": 'internal server error from the app'
         }), 500
 
@@ -304,7 +305,7 @@ def auth_error(error):
 def not_found(error):
     return jsonify({
                     "success": False,
-                    "error": error,
+                    "error": jsonify(error),
                     "message": "not authenticated from the app"
                     }), 401
 
