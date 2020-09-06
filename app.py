@@ -30,8 +30,8 @@ def get_all_patients():
                 "description": "patients not found"
             }), 404
     except Exception as err:
-        print("get all patients: ", err)
-        return jsonify({"success": False}), 500
+        # print("get all patients: ", err)
+        return jsonify({"success": False, "error": str(err)}), 500
 
     for patient in patients:
         # doctor = Doctor.query.get(patient.doctor_id).short_format()
@@ -56,8 +56,8 @@ def get_patient(patient_id):
             }), 404
 
     except Exception as err:
-        print("get patient: ", err)
-        return jsonify({"success": False}), 500
+        # print("get patient: ", err)
+        return jsonify({"success": False, "error": str(err)}), 500
 
     return jsonify({
         "success": True,
@@ -93,9 +93,9 @@ def create_patient():
             "success": False,
             "description": "there is patient with the same email"
         }), 200
-    # except Exception as err:
-    #     print(err)
-    #     return jsonify({"success": False}), 500
+    except Exception as err:
+        # print(err)
+        return jsonify({"success": False, "error": str(err)}), 500
 
     return jsonify({
         "success": True,
@@ -131,8 +131,8 @@ def update_patient(patient_id):
         }), 200
 
     except Exception as err:
-        print("doctor update: ", err)
-        return jsonify({"success": False}), 500
+        # print("doctor update: ", err)
+        return jsonify({"success": False, "error": str(err)}), 500
 
     return jsonify({
         "success": True,
@@ -152,8 +152,8 @@ def delete_patient(patient_id):
             }), 200
         else:
             patient.delete()
-    except Exception:
-        return jsonify({"success": False}), 500
+    except Exception as err:
+        return jsonify({"success": False, "error": str(err)}), 500
 
     return jsonify({
         "success": True,
@@ -174,8 +174,8 @@ def get_all_doctors():
                 "success": True,
                 "description": "doctors not found"
             }), 404
-    except Exception:
-        return jsonify({"success": False}), 500
+    except Exception as err:
+        return jsonify({"success": False, "error": str(err)}), 500
 
     for doctor in doctors:
         doctors_list.append(doctor.format())
@@ -197,8 +197,8 @@ def get_doctor(doctor_id):
                 "description": "doctor not found"
             }), 404
 
-    except Exception:
-        return jsonify({"success": False}), 500
+    except Exception as err:
+        return jsonify({"success": False, "error": str(err)}), 500
 
     return jsonify({
         "success": True,
@@ -223,8 +223,8 @@ def create_doctor():
             "success": False,
             "description": "there is doctor with the same email"
         })
-    except Exception :
-        return jsonify({"success": False}), 500
+    except Exception as err:
+        return jsonify({"success": False, "error": str(err)}), 500
 
     return jsonify({
         "success": True,
@@ -245,8 +245,8 @@ def update_doctors(doctor_id):
             }), 404
         else:
             doctor.update(doctor_data)
-    except Exception:
-        return jsonify({"success": False}), 500
+    except Exception as err:
+        return jsonify({"success": False, "error": str(err)}), 500
 
     return jsonify({
         "success": True,
@@ -270,12 +270,13 @@ def delete_doctor(doctor_id):
         print("delete doctor: ", err)
         return jsonify({
             "success": False,
+            "error": str(err),
             "description": "cannot delete doctor 'he has patients', please reassign the patients "
         }), 500
 
     except Exception as err:
-        print("delete doctor: ", err)
-        return jsonify({"success": False}), 500
+        # print("delete doctor: ", err)
+        return jsonify({"success": False, "error": str(err)}), 500
 
     return jsonify({
         "success": True,
@@ -286,28 +287,28 @@ def delete_doctor(doctor_id):
 @app.errorhandler(404)
 def not_found(error):
     return jsonify({
-                    "success": False,
-                    "error": str(error),
-                    "message": "resource not found from the app"
-                    }), 404
+                "success": False,
+                "error": str(error),
+                "message": "resource not found from the app"
+            }), 404
 
 
 @app.errorhandler(500)
 def auth_error(error):
     return jsonify({
-        "success": False,
-        "error": str(error),
-        "message": 'internal server error from the app'
+            "success": False,
+            "error": str(error),
+            "message": 'internal server error from the app'
         }), 500
 
 
 @app.errorhandler(401)
 def not_found(error):
     return jsonify({
-                    "success": False,
-                    "error": str(error),
-                    "message": "not authenticated from the app"
-                    }), 401
+                "success": False,
+                "error": str(error),
+                "message": "not authenticated from the app"
+            }), 401
 
 
 if __name__ == '__main__':

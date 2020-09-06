@@ -4,8 +4,20 @@ This project is a simple Hospital management system .
 This project use auth0 to make login and authorization process.
 You can use this like to make login and get the token for three 
 different users accounts:
-###### Admin, Doctor, Patient
-You can use this link to login and sign up:
+
+I already create three accounts to test.
+###### Admin: 
+- have all permission to deals with patients and doctors.
+- to login as admin: admin@hospital.com  , password:Admin#123
+######Doctor:
+- have all permission to deals with patients but just get doctor by id.
+- to login as doctor: doctor@hospital.com  , password:Doctor#123 
+######Patient:
+- have permission to just get patient by id. 
+- to login as patient: patient@hospital.com  , password:Patient#123
+
+### Note: Please use postman collection to test  follow next step to  update the token if needed . 
+You can use this link to " get the token " login and sign up :
 ```
 https://eng-auth.us.auth0.com/authorize?
   response_type=token&
@@ -14,6 +26,7 @@ https://eng-auth.us.auth0.com/authorize?
   redirect_uri=http://localhost:5000/&
   state=STATE
 ```
+
 You can use this link to logout:   
 
      https://eng-auth.us.auth0.com/v2/logout?federated
