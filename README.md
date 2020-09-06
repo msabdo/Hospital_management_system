@@ -1,6 +1,9 @@
 # Hospital_management_system
-This project is a simple Hospital management system . 
-
+This project is a simple Hospital management system .
+This Application is hosted on heroku and the link is:
+````
+https://simple-hospital-system.herokuapp.com
+````
 This project use auth0 to make login and authorization process.
 You can use this like to make login and get the token for three 
 different users accounts:
