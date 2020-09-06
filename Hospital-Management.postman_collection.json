@@ -1,0 +1,1117 @@
+{
+	"info": {
+		"_postman_id": "742211b2-9148-430e-887b-f7d641b26ddc",
+		"name": "Hospital-Management",
+		"description": "the collection for hospital management system .\r\nthis is the capstone udactity project.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "patients",
+			"item": [
+				{
+					"name": "get_all_patients",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "aae27a7a-7e5d-4924-a489-836de355351f",
+								"exec": [
+									"// pm.test(\"Status code is 403\", function () {\r",
+									"//     pm.response.to.have.status(403);\r",
+									"// });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWZiYmM2NDc4YjAwNjdkOTA3MWMiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjAxNTMsImV4cCI6MTU5OTUwNjU1MywiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpwYXRpZW50Il19.VccCm3wTJtqgJDEKV8uwW8-O_cbRUozAUzS-0_fRZgu925Utvq7eL8YzOCUyuJAaqrSOTp1pIUjMRuGVslSkI36cBzhluKW9zT1-MBucksg6i0W19gxKeUb-LVaYYfM1LVX1U7jJKJ2ogL4Al6UU-OaQm68FZGj784XkB2MBAQ153us1ID28KZ8ocHVQ30o12-pJYja-1NQsJgNRiLtKVmv2f7qPF8LeIKQsvEbijtqhDZA9PZP9XUanRy7pJcOuhGiC7yQpygCW_LMGm31-MHyKj-DuQ5ZHIY6LWEzVeQdtTN7dqgVm8-0XoB64s0gQSv00XN_8QXgxAoSuyZ02Qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_patient_by_id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2f1cd67e-e334-4df3-8d7c-432b7b23af36",
+								"exec": [
+									"// pm.test(\"Status code is 200\", function () {\r",
+									"//     pm.response.to.have.status(200);\r",
+									"// });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWZiYmM2NDc4YjAwNjdkOTA3MWMiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjAxNTMsImV4cCI6MTU5OTUwNjU1MywiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpwYXRpZW50Il19.VccCm3wTJtqgJDEKV8uwW8-O_cbRUozAUzS-0_fRZgu925Utvq7eL8YzOCUyuJAaqrSOTp1pIUjMRuGVslSkI36cBzhluKW9zT1-MBucksg6i0W19gxKeUb-LVaYYfM1LVX1U7jJKJ2ogL4Al6UU-OaQm68FZGj784XkB2MBAQ153us1ID28KZ8ocHVQ30o12-pJYja-1NQsJgNRiLtKVmv2f7qPF8LeIKQsvEbijtqhDZA9PZP9XUanRy7pJcOuhGiC7yQpygCW_LMGm31-MHyKj-DuQ5ZHIY6LWEzVeQdtTN7dqgVm8-0XoB64s0gQSv00XN_8QXgxAoSuyZ02Qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patients/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_patient",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "26c5ede8-7bf4-4335-8639-028a32015279",
+								"exec": [
+									"// pm.test(\"Status code is 403\", function () {\r",
+									"//     pm.response.to.have.status(403);\r",
+									"// });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWZiYmM2NDc4YjAwNjdkOTA3MWMiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjAxNTMsImV4cCI6MTU5OTUwNjU1MywiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpwYXRpZW50Il19.VccCm3wTJtqgJDEKV8uwW8-O_cbRUozAUzS-0_fRZgu925Utvq7eL8YzOCUyuJAaqrSOTp1pIUjMRuGVslSkI36cBzhluKW9zT1-MBucksg6i0W19gxKeUb-LVaYYfM1LVX1U7jJKJ2ogL4Al6UU-OaQm68FZGj784XkB2MBAQ153us1ID28KZ8ocHVQ30o12-pJYja-1NQsJgNRiLtKVmv2f7qPF8LeIKQsvEbijtqhDZA9PZP9XUanRy7pJcOuhGiC7yQpygCW_LMGm31-MHyKj-DuQ5ZHIY6LWEzVeQdtTN7dqgVm8-0XoB64s0gQSv00XN_8QXgxAoSuyZ02Qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"name\": \"patient3\",\r\n    \"age\": 50,\r\n    \"address\": \"Cairo-Egypt\",\r\n    \"email\": \"patient3@example.com\",\r\n    \"examine_report\": \"cancer \",\r\n    \"doctor_id\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/patients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_patient",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cb6f0280-9c82-4cf9-a550-e4e2b6ddf3df",
+								"exec": [
+									"// pm.test(\"Status code is 403\", function () {\r",
+									"//     pm.response.to.have.status(403);\r",
+									"// });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWZiYmM2NDc4YjAwNjdkOTA3MWMiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjAxNTMsImV4cCI6MTU5OTUwNjU1MywiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpwYXRpZW50Il19.VccCm3wTJtqgJDEKV8uwW8-O_cbRUozAUzS-0_fRZgu925Utvq7eL8YzOCUyuJAaqrSOTp1pIUjMRuGVslSkI36cBzhluKW9zT1-MBucksg6i0W19gxKeUb-LVaYYfM1LVX1U7jJKJ2ogL4Al6UU-OaQm68FZGj784XkB2MBAQ153us1ID28KZ8ocHVQ30o12-pJYja-1NQsJgNRiLtKVmv2f7qPF8LeIKQsvEbijtqhDZA9PZP9XUanRy7pJcOuhGiC7yQpygCW_LMGm31-MHyKj-DuQ5ZHIY6LWEzVeQdtTN7dqgVm8-0XoB64s0gQSv00XN_8QXgxAoSuyZ02Qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"name\": \"patient4\",\r\n    \"age\": 52,\r\n    \"address\": \"Asharqia-Egypt\",\r\n    \"email\": \"patient4@example.com\",\r\n    \"examine_report\": \"blood cancer \",\r\n    \"doctor_id\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/patients/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWZiYmM2NDc4YjAwNjdkOTA3MWMiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjAxNTMsImV4cCI6MTU5OTUwNjU1MywiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpwYXRpZW50Il19.VccCm3wTJtqgJDEKV8uwW8-O_cbRUozAUzS-0_fRZgu925Utvq7eL8YzOCUyuJAaqrSOTp1pIUjMRuGVslSkI36cBzhluKW9zT1-MBucksg6i0W19gxKeUb-LVaYYfM1LVX1U7jJKJ2ogL4Al6UU-OaQm68FZGj784XkB2MBAQ153us1ID28KZ8ocHVQ30o12-pJYja-1NQsJgNRiLtKVmv2f7qPF8LeIKQsvEbijtqhDZA9PZP9XUanRy7pJcOuhGiC7yQpygCW_LMGm31-MHyKj-DuQ5ZHIY6LWEzVeQdtTN7dqgVm8-0XoB64s0gQSv00XN_8QXgxAoSuyZ02Qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patients/21",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_doctors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWZiYmM2NDc4YjAwNjdkOTA3MWMiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjAxNTMsImV4cCI6MTU5OTUwNjU1MywiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpwYXRpZW50Il19.VccCm3wTJtqgJDEKV8uwW8-O_cbRUozAUzS-0_fRZgu925Utvq7eL8YzOCUyuJAaqrSOTp1pIUjMRuGVslSkI36cBzhluKW9zT1-MBucksg6i0W19gxKeUb-LVaYYfM1LVX1U7jJKJ2ogL4Al6UU-OaQm68FZGj784XkB2MBAQ153us1ID28KZ8ocHVQ30o12-pJYja-1NQsJgNRiLtKVmv2f7qPF8LeIKQsvEbijtqhDZA9PZP9XUanRy7pJcOuhGiC7yQpygCW_LMGm31-MHyKj-DuQ5ZHIY6LWEzVeQdtTN7dqgVm8-0XoB64s0gQSv00XN_8QXgxAoSuyZ02Qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_doctor_by_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWZiYmM2NDc4YjAwNjdkOTA3MWMiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjAxNTMsImV4cCI6MTU5OTUwNjU1MywiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpwYXRpZW50Il19.VccCm3wTJtqgJDEKV8uwW8-O_cbRUozAUzS-0_fRZgu925Utvq7eL8YzOCUyuJAaqrSOTp1pIUjMRuGVslSkI36cBzhluKW9zT1-MBucksg6i0W19gxKeUb-LVaYYfM1LVX1U7jJKJ2ogL4Al6UU-OaQm68FZGj784XkB2MBAQ153us1ID28KZ8ocHVQ30o12-pJYja-1NQsJgNRiLtKVmv2f7qPF8LeIKQsvEbijtqhDZA9PZP9XUanRy7pJcOuhGiC7yQpygCW_LMGm31-MHyKj-DuQ5ZHIY6LWEzVeQdtTN7dqgVm8-0XoB64s0gQSv00XN_8QXgxAoSuyZ02Qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctors/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWZiYmM2NDc4YjAwNjdkOTA3MWMiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjAxNTMsImV4cCI6MTU5OTUwNjU1MywiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpwYXRpZW50Il19.VccCm3wTJtqgJDEKV8uwW8-O_cbRUozAUzS-0_fRZgu925Utvq7eL8YzOCUyuJAaqrSOTp1pIUjMRuGVslSkI36cBzhluKW9zT1-MBucksg6i0W19gxKeUb-LVaYYfM1LVX1U7jJKJ2ogL4Al6UU-OaQm68FZGj784XkB2MBAQ153us1ID28KZ8ocHVQ30o12-pJYja-1NQsJgNRiLtKVmv2f7qPF8LeIKQsvEbijtqhDZA9PZP9XUanRy7pJcOuhGiC7yQpygCW_LMGm31-MHyKj-DuQ5ZHIY6LWEzVeQdtTN7dqgVm8-0XoB64s0gQSv00XN_8QXgxAoSuyZ02Qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"doctor4\",\r\n   \"address\":\"Asharqia-Egypt\",\r\n   \"salary\": 2500,\r\n   \"email\": \"doctor4@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/doctors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWZiYmM2NDc4YjAwNjdkOTA3MWMiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjAxNTMsImV4cCI6MTU5OTUwNjU1MywiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpwYXRpZW50Il19.VccCm3wTJtqgJDEKV8uwW8-O_cbRUozAUzS-0_fRZgu925Utvq7eL8YzOCUyuJAaqrSOTp1pIUjMRuGVslSkI36cBzhluKW9zT1-MBucksg6i0W19gxKeUb-LVaYYfM1LVX1U7jJKJ2ogL4Al6UU-OaQm68FZGj784XkB2MBAQ153us1ID28KZ8ocHVQ30o12-pJYja-1NQsJgNRiLtKVmv2f7qPF8LeIKQsvEbijtqhDZA9PZP9XUanRy7pJcOuhGiC7yQpygCW_LMGm31-MHyKj-DuQ5ZHIY6LWEzVeQdtTN7dqgVm8-0XoB64s0gQSv00XN_8QXgxAoSuyZ02Qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"doctor4\",\r\n   \"address\":\"Asharqia-Egypt\",\r\n   \"salary\": 3500,\r\n   \"email\": \"doctor4@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/doctors/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWZiYmM2NDc4YjAwNjdkOTA3MWMiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjAxNTMsImV4cCI6MTU5OTUwNjU1MywiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpwYXRpZW50Il19.VccCm3wTJtqgJDEKV8uwW8-O_cbRUozAUzS-0_fRZgu925Utvq7eL8YzOCUyuJAaqrSOTp1pIUjMRuGVslSkI36cBzhluKW9zT1-MBucksg6i0W19gxKeUb-LVaYYfM1LVX1U7jJKJ2ogL4Al6UU-OaQm68FZGj784XkB2MBAQ153us1ID28KZ8ocHVQ30o12-pJYja-1NQsJgNRiLtKVmv2f7qPF8LeIKQsvEbijtqhDZA9PZP9XUanRy7pJcOuhGiC7yQpygCW_LMGm31-MHyKj-DuQ5ZHIY6LWEzVeQdtTN7dqgVm8-0XoB64s0gQSv00XN_8QXgxAoSuyZ02Qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctors/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWZiYmM2NDc4YjAwNjdkOTA3MWMiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjAxNTMsImV4cCI6MTU5OTUwNjU1MywiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpwYXRpZW50Il19.VccCm3wTJtqgJDEKV8uwW8-O_cbRUozAUzS-0_fRZgu925Utvq7eL8YzOCUyuJAaqrSOTp1pIUjMRuGVslSkI36cBzhluKW9zT1-MBucksg6i0W19gxKeUb-LVaYYfM1LVX1U7jJKJ2ogL4Al6UU-OaQm68FZGj784XkB2MBAQ153us1ID28KZ8ocHVQ30o12-pJYja-1NQsJgNRiLtKVmv2f7qPF8LeIKQsvEbijtqhDZA9PZP9XUanRy7pJcOuhGiC7yQpygCW_LMGm31-MHyKj-DuQ5ZHIY6LWEzVeQdtTN7dqgVm8-0XoB64s0gQSv00XN_8QXgxAoSuyZ02Qw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b844b594-c99e-44c6-ab7d-05c04872bcfd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f52f2f73-762c-4258-b18f-6049f3e632c8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "get_all_patients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWYxODE0NjE2MTAwNmQyNWViZWUiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTg4MDEsImV4cCI6MTU5OTUwNTIwMSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkb2N0b3IiLCJkZWxldGU6cGF0aWVudCIsImdldDphbGxfZG9jdG9ycyIsImdldDphbGxfcGF0aWVudHMiLCJnZXQ6ZG9jdG9yIiwiZ2V0OnBhdGllbnQiLCJwb3N0OmRvY3RvciIsInBvc3Q6cGF0aWVudCIsInB1dDpkb2N0b3IiLCJwdXQ6cGF0aWVudCJdfQ.XYCqjMqp-hIcUbjJECJFyJdWtWC0sjCFXxVPax6ZvttmbC8-4m7r38sfYM1pMulKtMGMJx5gxH5A7C0YIBC__Lz4SWwRze2agXBkHne7-qQhgZt8-eaRS776zYiDMJfrvsEVRL_q9sVxwtSTZMW6s-lroyz-Al2krPIckmNeBL19GMr1j47tbyxEZrQ2TY_2pxTgCYeh1_vZzS5vm10dU3mcwuDXCsFwFoXebqWN3ORU-2qLjRaB_qCCYpHe4AmxAYsVQtzY7GPK7mHjstfFc2IxblPmg5Gb9os8tqcurR6pxfQ3ewwgJrvlMXPWc5DTB1lKJDUuqwJdsMm3qjB-LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_patient_by_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWYxODE0NjE2MTAwNmQyNWViZWUiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTg4MDEsImV4cCI6MTU5OTUwNTIwMSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkb2N0b3IiLCJkZWxldGU6cGF0aWVudCIsImdldDphbGxfZG9jdG9ycyIsImdldDphbGxfcGF0aWVudHMiLCJnZXQ6ZG9jdG9yIiwiZ2V0OnBhdGllbnQiLCJwb3N0OmRvY3RvciIsInBvc3Q6cGF0aWVudCIsInB1dDpkb2N0b3IiLCJwdXQ6cGF0aWVudCJdfQ.XYCqjMqp-hIcUbjJECJFyJdWtWC0sjCFXxVPax6ZvttmbC8-4m7r38sfYM1pMulKtMGMJx5gxH5A7C0YIBC__Lz4SWwRze2agXBkHne7-qQhgZt8-eaRS776zYiDMJfrvsEVRL_q9sVxwtSTZMW6s-lroyz-Al2krPIckmNeBL19GMr1j47tbyxEZrQ2TY_2pxTgCYeh1_vZzS5vm10dU3mcwuDXCsFwFoXebqWN3ORU-2qLjRaB_qCCYpHe4AmxAYsVQtzY7GPK7mHjstfFc2IxblPmg5Gb9os8tqcurR6pxfQ3ewwgJrvlMXPWc5DTB1lKJDUuqwJdsMm3qjB-LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patients/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWYxODE0NjE2MTAwNmQyNWViZWUiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTg4MDEsImV4cCI6MTU5OTUwNTIwMSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkb2N0b3IiLCJkZWxldGU6cGF0aWVudCIsImdldDphbGxfZG9jdG9ycyIsImdldDphbGxfcGF0aWVudHMiLCJnZXQ6ZG9jdG9yIiwiZ2V0OnBhdGllbnQiLCJwb3N0OmRvY3RvciIsInBvc3Q6cGF0aWVudCIsInB1dDpkb2N0b3IiLCJwdXQ6cGF0aWVudCJdfQ.XYCqjMqp-hIcUbjJECJFyJdWtWC0sjCFXxVPax6ZvttmbC8-4m7r38sfYM1pMulKtMGMJx5gxH5A7C0YIBC__Lz4SWwRze2agXBkHne7-qQhgZt8-eaRS776zYiDMJfrvsEVRL_q9sVxwtSTZMW6s-lroyz-Al2krPIckmNeBL19GMr1j47tbyxEZrQ2TY_2pxTgCYeh1_vZzS5vm10dU3mcwuDXCsFwFoXebqWN3ORU-2qLjRaB_qCCYpHe4AmxAYsVQtzY7GPK7mHjstfFc2IxblPmg5Gb9os8tqcurR6pxfQ3ewwgJrvlMXPWc5DTB1lKJDUuqwJdsMm3qjB-LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"name\": \"patient3\",\r\n    \"age\": 50,\r\n    \"address\": \"Cairo-Egypt\",\r\n    \"email\": \"patient10@example.com\",\r\n    \"examine_report\": \"cancer \",\r\n    \"doctor_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/patients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWYxODE0NjE2MTAwNmQyNWViZWUiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTg4MDEsImV4cCI6MTU5OTUwNTIwMSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkb2N0b3IiLCJkZWxldGU6cGF0aWVudCIsImdldDphbGxfZG9jdG9ycyIsImdldDphbGxfcGF0aWVudHMiLCJnZXQ6ZG9jdG9yIiwiZ2V0OnBhdGllbnQiLCJwb3N0OmRvY3RvciIsInBvc3Q6cGF0aWVudCIsInB1dDpkb2N0b3IiLCJwdXQ6cGF0aWVudCJdfQ.XYCqjMqp-hIcUbjJECJFyJdWtWC0sjCFXxVPax6ZvttmbC8-4m7r38sfYM1pMulKtMGMJx5gxH5A7C0YIBC__Lz4SWwRze2agXBkHne7-qQhgZt8-eaRS776zYiDMJfrvsEVRL_q9sVxwtSTZMW6s-lroyz-Al2krPIckmNeBL19GMr1j47tbyxEZrQ2TY_2pxTgCYeh1_vZzS5vm10dU3mcwuDXCsFwFoXebqWN3ORU-2qLjRaB_qCCYpHe4AmxAYsVQtzY7GPK7mHjstfFc2IxblPmg5Gb9os8tqcurR6pxfQ3ewwgJrvlMXPWc5DTB1lKJDUuqwJdsMm3qjB-LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"name\": \"patient3\",\r\n    \"age\": 52,\r\n    \"address\": \"Asharqia-Egypt\",\r\n    \"email\": \"patient3@example.com\",\r\n    \"examine_report\": \"blood cancer \",\r\n    \"doctor_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/patients/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWYxODE0NjE2MTAwNmQyNWViZWUiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTg4MDEsImV4cCI6MTU5OTUwNTIwMSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkb2N0b3IiLCJkZWxldGU6cGF0aWVudCIsImdldDphbGxfZG9jdG9ycyIsImdldDphbGxfcGF0aWVudHMiLCJnZXQ6ZG9jdG9yIiwiZ2V0OnBhdGllbnQiLCJwb3N0OmRvY3RvciIsInBvc3Q6cGF0aWVudCIsInB1dDpkb2N0b3IiLCJwdXQ6cGF0aWVudCJdfQ.XYCqjMqp-hIcUbjJECJFyJdWtWC0sjCFXxVPax6ZvttmbC8-4m7r38sfYM1pMulKtMGMJx5gxH5A7C0YIBC__Lz4SWwRze2agXBkHne7-qQhgZt8-eaRS776zYiDMJfrvsEVRL_q9sVxwtSTZMW6s-lroyz-Al2krPIckmNeBL19GMr1j47tbyxEZrQ2TY_2pxTgCYeh1_vZzS5vm10dU3mcwuDXCsFwFoXebqWN3ORU-2qLjRaB_qCCYpHe4AmxAYsVQtzY7GPK7mHjstfFc2IxblPmg5Gb9os8tqcurR6pxfQ3ewwgJrvlMXPWc5DTB1lKJDUuqwJdsMm3qjB-LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patients/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_doctors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWYxODE0NjE2MTAwNmQyNWViZWUiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTg4MDEsImV4cCI6MTU5OTUwNTIwMSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkb2N0b3IiLCJkZWxldGU6cGF0aWVudCIsImdldDphbGxfZG9jdG9ycyIsImdldDphbGxfcGF0aWVudHMiLCJnZXQ6ZG9jdG9yIiwiZ2V0OnBhdGllbnQiLCJwb3N0OmRvY3RvciIsInBvc3Q6cGF0aWVudCIsInB1dDpkb2N0b3IiLCJwdXQ6cGF0aWVudCJdfQ.XYCqjMqp-hIcUbjJECJFyJdWtWC0sjCFXxVPax6ZvttmbC8-4m7r38sfYM1pMulKtMGMJx5gxH5A7C0YIBC__Lz4SWwRze2agXBkHne7-qQhgZt8-eaRS776zYiDMJfrvsEVRL_q9sVxwtSTZMW6s-lroyz-Al2krPIckmNeBL19GMr1j47tbyxEZrQ2TY_2pxTgCYeh1_vZzS5vm10dU3mcwuDXCsFwFoXebqWN3ORU-2qLjRaB_qCCYpHe4AmxAYsVQtzY7GPK7mHjstfFc2IxblPmg5Gb9os8tqcurR6pxfQ3ewwgJrvlMXPWc5DTB1lKJDUuqwJdsMm3qjB-LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_doctor_by_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWYxODE0NjE2MTAwNmQyNWViZWUiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTg4MDEsImV4cCI6MTU5OTUwNTIwMSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkb2N0b3IiLCJkZWxldGU6cGF0aWVudCIsImdldDphbGxfZG9jdG9ycyIsImdldDphbGxfcGF0aWVudHMiLCJnZXQ6ZG9jdG9yIiwiZ2V0OnBhdGllbnQiLCJwb3N0OmRvY3RvciIsInBvc3Q6cGF0aWVudCIsInB1dDpkb2N0b3IiLCJwdXQ6cGF0aWVudCJdfQ.XYCqjMqp-hIcUbjJECJFyJdWtWC0sjCFXxVPax6ZvttmbC8-4m7r38sfYM1pMulKtMGMJx5gxH5A7C0YIBC__Lz4SWwRze2agXBkHne7-qQhgZt8-eaRS776zYiDMJfrvsEVRL_q9sVxwtSTZMW6s-lroyz-Al2krPIckmNeBL19GMr1j47tbyxEZrQ2TY_2pxTgCYeh1_vZzS5vm10dU3mcwuDXCsFwFoXebqWN3ORU-2qLjRaB_qCCYpHe4AmxAYsVQtzY7GPK7mHjstfFc2IxblPmg5Gb9os8tqcurR6pxfQ3ewwgJrvlMXPWc5DTB1lKJDUuqwJdsMm3qjB-LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctors/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWYxODE0NjE2MTAwNmQyNWViZWUiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTg4MDEsImV4cCI6MTU5OTUwNTIwMSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkb2N0b3IiLCJkZWxldGU6cGF0aWVudCIsImdldDphbGxfZG9jdG9ycyIsImdldDphbGxfcGF0aWVudHMiLCJnZXQ6ZG9jdG9yIiwiZ2V0OnBhdGllbnQiLCJwb3N0OmRvY3RvciIsInBvc3Q6cGF0aWVudCIsInB1dDpkb2N0b3IiLCJwdXQ6cGF0aWVudCJdfQ.XYCqjMqp-hIcUbjJECJFyJdWtWC0sjCFXxVPax6ZvttmbC8-4m7r38sfYM1pMulKtMGMJx5gxH5A7C0YIBC__Lz4SWwRze2agXBkHne7-qQhgZt8-eaRS776zYiDMJfrvsEVRL_q9sVxwtSTZMW6s-lroyz-Al2krPIckmNeBL19GMr1j47tbyxEZrQ2TY_2pxTgCYeh1_vZzS5vm10dU3mcwuDXCsFwFoXebqWN3ORU-2qLjRaB_qCCYpHe4AmxAYsVQtzY7GPK7mHjstfFc2IxblPmg5Gb9os8tqcurR6pxfQ3ewwgJrvlMXPWc5DTB1lKJDUuqwJdsMm3qjB-LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"doctor6\",\r\n   \"address\":\"Asharqia-Egypt\",\r\n   \"salary\": 2500,\r\n   \"email\": \"doctor6@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/doctors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWYxODE0NjE2MTAwNmQyNWViZWUiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTg4MDEsImV4cCI6MTU5OTUwNTIwMSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkb2N0b3IiLCJkZWxldGU6cGF0aWVudCIsImdldDphbGxfZG9jdG9ycyIsImdldDphbGxfcGF0aWVudHMiLCJnZXQ6ZG9jdG9yIiwiZ2V0OnBhdGllbnQiLCJwb3N0OmRvY3RvciIsInBvc3Q6cGF0aWVudCIsInB1dDpkb2N0b3IiLCJwdXQ6cGF0aWVudCJdfQ.XYCqjMqp-hIcUbjJECJFyJdWtWC0sjCFXxVPax6ZvttmbC8-4m7r38sfYM1pMulKtMGMJx5gxH5A7C0YIBC__Lz4SWwRze2agXBkHne7-qQhgZt8-eaRS776zYiDMJfrvsEVRL_q9sVxwtSTZMW6s-lroyz-Al2krPIckmNeBL19GMr1j47tbyxEZrQ2TY_2pxTgCYeh1_vZzS5vm10dU3mcwuDXCsFwFoXebqWN3ORU-2qLjRaB_qCCYpHe4AmxAYsVQtzY7GPK7mHjstfFc2IxblPmg5Gb9os8tqcurR6pxfQ3ewwgJrvlMXPWc5DTB1lKJDUuqwJdsMm3qjB-LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"doctor10\",\r\n   \"address\":\"Asharqia-Egypt\",\r\n   \"salary\": 3500,\r\n   \"email\": \"doctor10@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/doctors/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWYxODE0NjE2MTAwNmQyNWViZWUiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTg4MDEsImV4cCI6MTU5OTUwNTIwMSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkb2N0b3IiLCJkZWxldGU6cGF0aWVudCIsImdldDphbGxfZG9jdG9ycyIsImdldDphbGxfcGF0aWVudHMiLCJnZXQ6ZG9jdG9yIiwiZ2V0OnBhdGllbnQiLCJwb3N0OmRvY3RvciIsInBvc3Q6cGF0aWVudCIsInB1dDpkb2N0b3IiLCJwdXQ6cGF0aWVudCJdfQ.XYCqjMqp-hIcUbjJECJFyJdWtWC0sjCFXxVPax6ZvttmbC8-4m7r38sfYM1pMulKtMGMJx5gxH5A7C0YIBC__Lz4SWwRze2agXBkHne7-qQhgZt8-eaRS776zYiDMJfrvsEVRL_q9sVxwtSTZMW6s-lroyz-Al2krPIckmNeBL19GMr1j47tbyxEZrQ2TY_2pxTgCYeh1_vZzS5vm10dU3mcwuDXCsFwFoXebqWN3ORU-2qLjRaB_qCCYpHe4AmxAYsVQtzY7GPK7mHjstfFc2IxblPmg5Gb9os8tqcurR6pxfQ3ewwgJrvlMXPWc5DTB1lKJDUuqwJdsMm3qjB-LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctors/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWYxODE0NjE2MTAwNmQyNWViZWUiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTg4MDEsImV4cCI6MTU5OTUwNTIwMSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkb2N0b3IiLCJkZWxldGU6cGF0aWVudCIsImdldDphbGxfZG9jdG9ycyIsImdldDphbGxfcGF0aWVudHMiLCJnZXQ6ZG9jdG9yIiwiZ2V0OnBhdGllbnQiLCJwb3N0OmRvY3RvciIsInBvc3Q6cGF0aWVudCIsInB1dDpkb2N0b3IiLCJwdXQ6cGF0aWVudCJdfQ.XYCqjMqp-hIcUbjJECJFyJdWtWC0sjCFXxVPax6ZvttmbC8-4m7r38sfYM1pMulKtMGMJx5gxH5A7C0YIBC__Lz4SWwRze2agXBkHne7-qQhgZt8-eaRS776zYiDMJfrvsEVRL_q9sVxwtSTZMW6s-lroyz-Al2krPIckmNeBL19GMr1j47tbyxEZrQ2TY_2pxTgCYeh1_vZzS5vm10dU3mcwuDXCsFwFoXebqWN3ORU-2qLjRaB_qCCYpHe4AmxAYsVQtzY7GPK7mHjstfFc2IxblPmg5Gb9os8tqcurR6pxfQ3ewwgJrvlMXPWc5DTB1lKJDUuqwJdsMm3qjB-LA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4af17df4-f74f-4a8f-8db1-dc7a81dfbe82",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "3b31e3a4-e96a-4404-a65e-eaef378f2c3d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "doctor",
+			"item": [
+				{
+					"name": "get_all_patients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWY3OTIwNzZhNzAwNjc4ZjdjMTIiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjI0ODQsImV4cCI6MTU5OTUwODg4NCwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpwYXRpZW50IiwiZ2V0OmFsbF9wYXRpZW50cyIsImdldDpkb2N0b3IiLCJnZXQ6cGF0aWVudCIsInBvc3Q6cGF0aWVudCIsInB1dDpwYXRpZW50Il19.U6oY-1o2boWjjwab2E_3PPx23XiorRieu-dq3oZ4fb4I7sOWLzHlYX3Zxqp6oJIyHmT2yhbUTa4JHHCrw3cPOh8LtvnG4detH_DnDneMTWcyggjYfv2CVJGoGcjP0kT-BtFEMDSpL4nvb2faMoov1TCUTpmPLI0atkAxOdhuosaIJsLiqtn0YXgW0VohBnE1H95yJecPOQFgLnX5eaXjYvk0ohzfbG7TlEo1Triux_vrE2pN3oxx84ikDMI4ASzoLWOUuvF848LZtflmk5QLV7Kw4yVROMcaCTCzW5hZVAp0o4mQxhcF96OwBDP-w-E7zyy56-88i6y3-t4ywrHycQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_patient_by_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWY3OTIwNzZhNzAwNjc4ZjdjMTIiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjI0ODQsImV4cCI6MTU5OTUwODg4NCwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpwYXRpZW50IiwiZ2V0OmFsbF9wYXRpZW50cyIsImdldDpkb2N0b3IiLCJnZXQ6cGF0aWVudCIsInBvc3Q6cGF0aWVudCIsInB1dDpwYXRpZW50Il19.U6oY-1o2boWjjwab2E_3PPx23XiorRieu-dq3oZ4fb4I7sOWLzHlYX3Zxqp6oJIyHmT2yhbUTa4JHHCrw3cPOh8LtvnG4detH_DnDneMTWcyggjYfv2CVJGoGcjP0kT-BtFEMDSpL4nvb2faMoov1TCUTpmPLI0atkAxOdhuosaIJsLiqtn0YXgW0VohBnE1H95yJecPOQFgLnX5eaXjYvk0ohzfbG7TlEo1Triux_vrE2pN3oxx84ikDMI4ASzoLWOUuvF848LZtflmk5QLV7Kw4yVROMcaCTCzW5hZVAp0o4mQxhcF96OwBDP-w-E7zyy56-88i6y3-t4ywrHycQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patients/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWY3OTIwNzZhNzAwNjc4ZjdjMTIiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjI0ODQsImV4cCI6MTU5OTUwODg4NCwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpwYXRpZW50IiwiZ2V0OmFsbF9wYXRpZW50cyIsImdldDpkb2N0b3IiLCJnZXQ6cGF0aWVudCIsInBvc3Q6cGF0aWVudCIsInB1dDpwYXRpZW50Il19.U6oY-1o2boWjjwab2E_3PPx23XiorRieu-dq3oZ4fb4I7sOWLzHlYX3Zxqp6oJIyHmT2yhbUTa4JHHCrw3cPOh8LtvnG4detH_DnDneMTWcyggjYfv2CVJGoGcjP0kT-BtFEMDSpL4nvb2faMoov1TCUTpmPLI0atkAxOdhuosaIJsLiqtn0YXgW0VohBnE1H95yJecPOQFgLnX5eaXjYvk0ohzfbG7TlEo1Triux_vrE2pN3oxx84ikDMI4ASzoLWOUuvF848LZtflmk5QLV7Kw4yVROMcaCTCzW5hZVAp0o4mQxhcF96OwBDP-w-E7zyy56-88i6y3-t4ywrHycQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"name\": \"patient10\",\r\n    \"age\": 50,\r\n    \"address\": \"Cairo-Egypt\",\r\n    \"email\": \"patient10@example.com\",\r\n    \"examine_report\": \"cancer \",\r\n    \"doctor_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/patients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWY3OTIwNzZhNzAwNjc4ZjdjMTIiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjI0ODQsImV4cCI6MTU5OTUwODg4NCwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpwYXRpZW50IiwiZ2V0OmFsbF9wYXRpZW50cyIsImdldDpkb2N0b3IiLCJnZXQ6cGF0aWVudCIsInBvc3Q6cGF0aWVudCIsInB1dDpwYXRpZW50Il19.U6oY-1o2boWjjwab2E_3PPx23XiorRieu-dq3oZ4fb4I7sOWLzHlYX3Zxqp6oJIyHmT2yhbUTa4JHHCrw3cPOh8LtvnG4detH_DnDneMTWcyggjYfv2CVJGoGcjP0kT-BtFEMDSpL4nvb2faMoov1TCUTpmPLI0atkAxOdhuosaIJsLiqtn0YXgW0VohBnE1H95yJecPOQFgLnX5eaXjYvk0ohzfbG7TlEo1Triux_vrE2pN3oxx84ikDMI4ASzoLWOUuvF848LZtflmk5QLV7Kw4yVROMcaCTCzW5hZVAp0o4mQxhcF96OwBDP-w-E7zyy56-88i6y3-t4ywrHycQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"name\": \"patient4\",\r\n    \"age\": 52,\r\n    \"address\": \"Asharqia-Egypt\",\r\n    \"email\": \"patient4@example.com\",\r\n    \"examine_report\": \"blood cancer \",\r\n    \"doctor_id\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/patients/22",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWY3OTIwNzZhNzAwNjc4ZjdjMTIiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjI0ODQsImV4cCI6MTU5OTUwODg4NCwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpwYXRpZW50IiwiZ2V0OmFsbF9wYXRpZW50cyIsImdldDpkb2N0b3IiLCJnZXQ6cGF0aWVudCIsInBvc3Q6cGF0aWVudCIsInB1dDpwYXRpZW50Il19.U6oY-1o2boWjjwab2E_3PPx23XiorRieu-dq3oZ4fb4I7sOWLzHlYX3Zxqp6oJIyHmT2yhbUTa4JHHCrw3cPOh8LtvnG4detH_DnDneMTWcyggjYfv2CVJGoGcjP0kT-BtFEMDSpL4nvb2faMoov1TCUTpmPLI0atkAxOdhuosaIJsLiqtn0YXgW0VohBnE1H95yJecPOQFgLnX5eaXjYvk0ohzfbG7TlEo1Triux_vrE2pN3oxx84ikDMI4ASzoLWOUuvF848LZtflmk5QLV7Kw4yVROMcaCTCzW5hZVAp0o4mQxhcF96OwBDP-w-E7zyy56-88i6y3-t4ywrHycQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/patients/22",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_doctors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWY3OTIwNzZhNzAwNjc4ZjdjMTIiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjI0ODQsImV4cCI6MTU5OTUwODg4NCwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpwYXRpZW50IiwiZ2V0OmFsbF9wYXRpZW50cyIsImdldDpkb2N0b3IiLCJnZXQ6cGF0aWVudCIsInBvc3Q6cGF0aWVudCIsInB1dDpwYXRpZW50Il19.U6oY-1o2boWjjwab2E_3PPx23XiorRieu-dq3oZ4fb4I7sOWLzHlYX3Zxqp6oJIyHmT2yhbUTa4JHHCrw3cPOh8LtvnG4detH_DnDneMTWcyggjYfv2CVJGoGcjP0kT-BtFEMDSpL4nvb2faMoov1TCUTpmPLI0atkAxOdhuosaIJsLiqtn0YXgW0VohBnE1H95yJecPOQFgLnX5eaXjYvk0ohzfbG7TlEo1Triux_vrE2pN3oxx84ikDMI4ASzoLWOUuvF848LZtflmk5QLV7Kw4yVROMcaCTCzW5hZVAp0o4mQxhcF96OwBDP-w-E7zyy56-88i6y3-t4ywrHycQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_doctor_by_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWY3OTIwNzZhNzAwNjc4ZjdjMTIiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjI0ODQsImV4cCI6MTU5OTUwODg4NCwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpwYXRpZW50IiwiZ2V0OmFsbF9wYXRpZW50cyIsImdldDpkb2N0b3IiLCJnZXQ6cGF0aWVudCIsInBvc3Q6cGF0aWVudCIsInB1dDpwYXRpZW50Il19.U6oY-1o2boWjjwab2E_3PPx23XiorRieu-dq3oZ4fb4I7sOWLzHlYX3Zxqp6oJIyHmT2yhbUTa4JHHCrw3cPOh8LtvnG4detH_DnDneMTWcyggjYfv2CVJGoGcjP0kT-BtFEMDSpL4nvb2faMoov1TCUTpmPLI0atkAxOdhuosaIJsLiqtn0YXgW0VohBnE1H95yJecPOQFgLnX5eaXjYvk0ohzfbG7TlEo1Triux_vrE2pN3oxx84ikDMI4ASzoLWOUuvF848LZtflmk5QLV7Kw4yVROMcaCTCzW5hZVAp0o4mQxhcF96OwBDP-w-E7zyy56-88i6y3-t4ywrHycQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctors/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWY3OTIwNzZhNzAwNjc4ZjdjMTIiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjI0ODQsImV4cCI6MTU5OTUwODg4NCwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpwYXRpZW50IiwiZ2V0OmFsbF9wYXRpZW50cyIsImdldDpkb2N0b3IiLCJnZXQ6cGF0aWVudCIsInBvc3Q6cGF0aWVudCIsInB1dDpwYXRpZW50Il19.U6oY-1o2boWjjwab2E_3PPx23XiorRieu-dq3oZ4fb4I7sOWLzHlYX3Zxqp6oJIyHmT2yhbUTa4JHHCrw3cPOh8LtvnG4detH_DnDneMTWcyggjYfv2CVJGoGcjP0kT-BtFEMDSpL4nvb2faMoov1TCUTpmPLI0atkAxOdhuosaIJsLiqtn0YXgW0VohBnE1H95yJecPOQFgLnX5eaXjYvk0ohzfbG7TlEo1Triux_vrE2pN3oxx84ikDMI4ASzoLWOUuvF848LZtflmk5QLV7Kw4yVROMcaCTCzW5hZVAp0o4mQxhcF96OwBDP-w-E7zyy56-88i6y3-t4ywrHycQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"doctor4\",\r\n   \"address\":\"Asharqia-Egypt\",\r\n   \"salary\": 2500,\r\n   \"email\": \"doctor4@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/doctors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWY3OTIwNzZhNzAwNjc4ZjdjMTIiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjI0ODQsImV4cCI6MTU5OTUwODg4NCwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpwYXRpZW50IiwiZ2V0OmFsbF9wYXRpZW50cyIsImdldDpkb2N0b3IiLCJnZXQ6cGF0aWVudCIsInBvc3Q6cGF0aWVudCIsInB1dDpwYXRpZW50Il19.U6oY-1o2boWjjwab2E_3PPx23XiorRieu-dq3oZ4fb4I7sOWLzHlYX3Zxqp6oJIyHmT2yhbUTa4JHHCrw3cPOh8LtvnG4detH_DnDneMTWcyggjYfv2CVJGoGcjP0kT-BtFEMDSpL4nvb2faMoov1TCUTpmPLI0atkAxOdhuosaIJsLiqtn0YXgW0VohBnE1H95yJecPOQFgLnX5eaXjYvk0ohzfbG7TlEo1Triux_vrE2pN3oxx84ikDMI4ASzoLWOUuvF848LZtflmk5QLV7Kw4yVROMcaCTCzW5hZVAp0o4mQxhcF96OwBDP-w-E7zyy56-88i6y3-t4ywrHycQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"doctor4\",\r\n   \"address\":\"Asharqia-Egypt\",\r\n   \"salary\": 3500,\r\n   \"email\": \"doctor4@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/doctors/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_doctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWY3OTIwNzZhNzAwNjc4ZjdjMTIiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MjI0ODQsImV4cCI6MTU5OTUwODg4NCwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpwYXRpZW50IiwiZ2V0OmFsbF9wYXRpZW50cyIsImdldDpkb2N0b3IiLCJnZXQ6cGF0aWVudCIsInBvc3Q6cGF0aWVudCIsInB1dDpwYXRpZW50Il19.U6oY-1o2boWjjwab2E_3PPx23XiorRieu-dq3oZ4fb4I7sOWLzHlYX3Zxqp6oJIyHmT2yhbUTa4JHHCrw3cPOh8LtvnG4detH_DnDneMTWcyggjYfv2CVJGoGcjP0kT-BtFEMDSpL4nvb2faMoov1TCUTpmPLI0atkAxOdhuosaIJsLiqtn0YXgW0VohBnE1H95yJecPOQFgLnX5eaXjYvk0ohzfbG7TlEo1Triux_vrE2pN3oxx84ikDMI4ASzoLWOUuvF848LZtflmk5QLV7Kw4yVROMcaCTCzW5hZVAp0o4mQxhcF96OwBDP-w-E7zyy56-88i6y3-t4ywrHycQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/doctors/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"doctors",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im93MjVwTjVXQ3lWV0FpcDVKNEZBVCJ9.eyJpc3MiOiJodHRwczovL2VuZy1hdXRoLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjUyNWY3OTIwNzZhNzAwNjc4ZjdjMTIiLCJhdWQiOiJIb3NwaXRhbF9BUEkiLCJpYXQiOjE1OTk0MTgzMzUsImV4cCI6MTU5OTUwNDczNSwiYXpwIjoiOXFFZ1hqbHJ5b0hsV1FEdElSSGdMTlRSYlJ2elB0ZmgiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpwYXRpZW50IiwiZ2V0OmFsbF9wYXRpZW50cyIsImdldDpkb2N0b3IiLCJnZXQ6cGF0aWVudCIsInBvc3Q6cGF0aWVudCIsInB1dDpwYXRpZW50Il19.ixwEGBGvZsjZRtEeK1cgXB0aQUiDEY2ccdxm6IVx3c3Htl_sVk7c0uITuHmgvwI7McuuiL53hAa7aRTMDT8QPzBJJyFJa4N3Uo2XXK8knJfWS0ZqW9Vz6y0aS8i1XQ3xaFqnZq4vBu3XnaUIhXMs10N-2xnbOFYjA-irzaHuRZ4unObhpy5MwrbRDCbdy5VlnCMDHvuikKj02A9QoUhIcSe-iTBOav9oNm7PYvg1ZYleqEpZISpuxWlGxEzIBnG9YpKpO3dWxDq4ikfYvFrz9vIHbh76GDniTrrcqYES1_D7FeOw5QczNe7sAc6z_t9IUWQxobyS_obOB7nbZZni6g",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b14b8a79-35c7-4293-bfc4-4583902a3efb",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2847b239-14fb-49e5-a775-14653fb19125",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
