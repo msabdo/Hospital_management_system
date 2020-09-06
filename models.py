@@ -1,6 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 
-database_name = 'hospital_management'
+# database_name = 'hospital_management'
 # database_path = "postgres://{}:{}@{}/{}".format('postgres', 'root', 'localhost:5432', database_name)
 database_path = 'postgres://plbmlrvknliolr:fabd3bda8491555ab1cfc0537c36ec14e91d77bf7121529ef82aa6662e5691de@ec2-34-238-26-109.compute-1.amazonaws.com:5432/df2vb936auvtnv'
 db = SQLAlchemy()
@@ -14,7 +14,7 @@ def setup_app(app):
 
 
 def db_drop_and_create_all():
-    db.drop_all()
+    # db.drop_all()
     db.create_all()
 
 

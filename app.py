@@ -9,7 +9,7 @@ setup_app(app)
 
 
 # CORS(app)
-# db_drop_and_create_all()
+db_drop_and_create_all()
 
 # ------------------------ patients routes ---------------#
 @app.route('/')
